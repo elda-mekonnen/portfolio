@@ -1,0 +1,45 @@
+---
+title: "Prosca"
+slug: "prosca"
+pitch: "An Android app that takes traditional group savings digital."
+year: 2024            # TODO: confirm the year
+era: "college"
+role: "Team of 5"     # TODO: your role, e.g. "Backend engineer"
+stack: ["Kotlin", "Node.js", "Express", "AWS", "Stripe", "scikit-learn"]
+links:
+  devpost: "https://devpost.com/software/prosca-backend"
+cover: "/projects/prosca/cover.png"
+coverAlt: "Four Prosca app screens: Home, Explore, Social, and My Pods"
+featured: true
+order: 4
+---
+
+## The problem
+
+A ROSCA (Rotating Savings and Credit Association) is an old idea. A group pays into a shared pot
+on a schedule, and each period one member takes the whole pot until everyone has had a turn.
+It works, but it usually lives across group chats, spreadsheets, and trust.
+
+## What we built
+
+Prosca puts the whole thing in one Android app. You can join public pods or run private ones.
+An ML model scores each member's reputation from their past activity in the app. Payments run
+automatically on a schedule, so nobody can drop out once a pod has started.
+
+The backend is Node.js and Express on AWS (EC2, RDS MySQL, S3). The app is Kotlin with Retrofit.
+Stripe handles payments, and a scikit-learn regression computes reputations.
+
+{/* TODO: describe the parts you personally built. */}
+
+## Outcome
+
+<Figure
+  src="/projects/prosca/poster.png"
+  width={2500}
+  height={1875}
+  alt="Prosca's Senior Design poster: the problem with traditional ROSCAs, app screens, ML-powered credit system, social impact, tech stack, and future work"
+  caption="Our Senior Design poster. Click to view full size."
+  zoom
+/>
+
+Prosca won **Best Social Impact** in the Senior Design class at the University of Pennsylvania.

@@ -1,0 +1,69 @@
+---
+title: "Qidase Reader"
+slug: "qidase-reader"
+pitch: "A multilingual reader for the Ethiopian Orthodox Divine Liturgy."
+year: 2026
+era: "post-college"
+role: "Team of 3"
+stack: ["React Native", "Expo", "TypeScript", "Expo Router", "GitHub Actions"]
+links:
+  live: "https://ethiopicorg.github.io/EthiopicReader/"
+cover: "/projects/qidase-reader/cover.png"
+coverAlt: "Qidase Reader home screen showing the content library: Kidan and Qidase"
+featured: true
+order: 1
+---
+
+## The problem
+
+The Divine Liturgy (Qidase) of the Ethiopian Orthodox Tewahedo Church is prayed in Ge'ez, a language
+most of the congregation doesn't speak. People follow along with printed books in Amharic or English,
+and it's easy to lose your place, especially if you're a catechumen.
+
+## What we built
+
+Qidase Reader shows the liturgy side by side in Ge'ez, Amharic, English, and transliteration. Each
+prayer is marked by who says it: priest, deacon, or congregation. It covers the Kidan, the Serate
+Kidase, and the anaphoras (Fere Qidase). It runs on iOS, Android, and the web from one Expo codebase.
+<Gallery
+  label="Qidase Reader screens"
+  images={[
+    {
+      src: "/projects/qidase-reader/kidan.png",
+      alt: "The Kidan prayer in four columns: Ge'ez, Amharic, English, and transliteration, with Priest and People labels",
+      caption: "Kidan: four languages side by side, each block labeled by who says it.",
+    },
+    {
+      src: "/projects/qidase-reader/qidase.png",
+      alt: "Qidase page with cards for choosing an anaphora, such as the Anaphora of the Apostles and St. Cyril",
+      caption: "Qidase: choose the anaphora for today's service.",
+    },
+    {
+      src: "/projects/qidase-reader/readings-picker.png",
+      alt: "Select Today's Readings dialog with the Pauline, Catholic, Acts, Psalm, and Gospel references filled in",
+      caption: "Readings picker: enter the day's readings once, and they're slotted into the liturgy.",
+    },
+    {
+      src: "/projects/qidase-reader/presentation.png",
+      alt: "Presentation mode on a black background showing a priest's prayer in Ge'ez, Amharic, and English",
+      caption: "Presentation mode: one block at a time, sized for a projector.",
+    },
+    {
+      src: "/projects/qidase-reader/settings.png",
+      alt: "Settings page with Ge'ez, Amharic, and English selected as display languages, plus primary language and text size",
+      caption: "Settings: pick up to three languages, the primary one, and the text size.",
+    },
+  ]}
+/>
+
+Before a service, you enter the day's readings once and the app slots them into the right places. A
+full-screen presentation mode then puts the text on a projector, one block at a time, with tap and
+keyboard navigation. There's also a browser-based admin tool so clergy and translators can edit the
+texts without touching code. On GitHub Pages it's password-protected and encrypted at deploy time.
+
+{/* TODO: which parts did you build? */}
+
+## Outcome
+
+{/* TODO: who uses it? Any numbers (churches, services, downloads)? */}
+It's live on the web, and the liturgy texts can be maintained by the people who know them best.

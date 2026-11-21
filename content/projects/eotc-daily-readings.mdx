@@ -1,0 +1,77 @@
+---
+title: "EOTC Daily Readings"
+slug: "eotc-daily-readings"
+pitch: "Each day's Ethiopian Orthodox readings, sorted out and in English and Amharic."
+year: 2026
+era: "post-college"
+role: "Solo developer"
+stack: ["React", "TypeScript", "Vite", "PWA"]
+links:
+  live: "https://elda-mekonnen-org.github.io/eotc-calendar/"
+cover: "/projects/eotc-daily-readings/cover.png"
+coverAlt: "EOTC Daily Readings showing the Pauline, Catholic, Acts, Psalm, and Gospel readings for a day in Great Lent"
+featured: true
+order: 2
+---
+
+## Why I built it
+
+In the Ethiopian Orthodox Church, every day of the year has its own set of liturgy readings: a
+Pauline epistle, a Catholic epistle, Acts, a Psalm, and a Gospel. A lot of people in my community,
+me included, like to use that day's readings for our own daily Bible reading.
+
+Finding them was harder than it should be. The readings live in a printed lectionary or a scanned
+PDF, and the system behind them isn't obvious. Each calendar day has its readings, but seasons like
+Great Lent, along with Sundays and feast days, have their own readings that take precedence. If you
+don't know those rules, it's easy to end up on the wrong passage. And there's no official English
+lectionary, so people who read mainly in English are left out.
+
+{/* TODO: add one real moment where you hit this yourself, e.g. "During Lent I'd flip between the
+PDF and my Bible app and still wasn't sure I had the right day." Keep it to a sentence or two. */}
+
+I wanted one place where anyone could open today's readings, already sorted out, in the language
+they read best.
+
+## What I built
+
+The app opens on today. A banner shows where you are in the church year, like "Great Lent · Zewerede
+Sunday · Day 1", with the Gregorian and Ethiopian dates side by side. Below it are the day's five
+readings.
+
+Tap a reading and the full passage opens right in the app, in English, Amharic, or both side by
+side, so you don't need a separate Bible. You can widen a passage by five verses on either side
+for context.
+
+<Gallery
+  label="EOTC Daily Readings screens"
+  images={[
+    {
+      src: "/projects/eotc-daily-readings/reading-text.png",
+      alt: "The Gospel of John 3:10-25 shown in full, with English and Amharic columns side by side",
+      caption: "The full passage, in English and Amharic side by side.",
+    },
+    {
+      src: "/projects/eotc-daily-readings/sunday-prep.png",
+      alt: "The readings for Qidist Sunday, day 8 of Great Lent, with the Gospel of Matthew 6:16-25 opened",
+      caption: "Looking ahead: the readings for the coming Sunday, ready before the liturgy.",
+    },
+    {
+      src: "/projects/eotc-daily-readings/settings.png",
+      alt: "Settings menu with English and Amharic translation options and a theme toggle",
+      caption: "Pick English, Amharic, or both, plus a dark theme.",
+    },
+  ]}
+/>
+
+Behind the scenes, the app works out which readings apply. The everyday calendar is the base
+layer. Seasonal schedules for Great Lent, Sundays, and feast days sit on top with a priority order,
+so the right readings win automatically and nobody has to know the rules.
+
+Because you can step to any date, it also works for preparing ahead. Open the coming Sunday and you
+can read its readings before the liturgy.
+
+## Outcome
+
+{/* TODO: who uses it? e.g. friends during Lent, people at your church, deacons preparing for service. */}
+It's live on GitHub Pages and installs to your home screen like an app. The current release covers
+Great Lent 2026.
