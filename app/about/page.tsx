@@ -68,7 +68,7 @@ export default function AboutPage() {
       {site.beyondCode.length > 0 && (
         <Section labelledBy="beyond-title" className="border-t border-border">
           <SectionHeader id="beyond-title" eyebrow="Beyond code" title="Off the clock" />
-          <ul className="grid gap-6 md:grid-cols-2">
+          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {site.beyondCode.map((item, i) => (
               <li key={item.title}>
                 <Reveal index={i} className="h-full rounded-card border border-border bg-surface p-6 md:p-8">
