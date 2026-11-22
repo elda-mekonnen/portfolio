@@ -32,8 +32,11 @@ export const site = {
   beyondCode: [
     {
       title: "Photography",
-      text: "At Penn I was a photographer for The Daily Pennsylvanian, shooting campus at night, student performances, and news around the university.",
-      link: { label: "See my published photos", href: "https://www.thedp.com/staff/elda-alemu-mekonnen" },
+      text: "At Penn I was a photographer for The Daily Pennsylvanian, shooting campus at night, student performances, and news around the university. I still shoot for fun and share it on Instagram.",
+      links: [
+        { label: "My photography on Instagram", href: "https://www.instagram.com/aesthetical.lypleasingg/" },
+        { label: "Photos for The Daily Pennsylvanian", href: "https://www.thedp.com/staff/elda-alemu-mekonnen" },
+      ],
     },
     {
       title: "Reading",
@@ -43,5 +46,5 @@ export const site = {
       title: "Walking",
       text: "Long walks are one of my favorite ways to spend a free afternoon.",
     },
-  ] as { title: string; text: string; link?: { label: string; href: string } }[],
+  ] as { title: string; text: string; links?: { label: string; href: string }[] }[],
 };

@@ -74,10 +74,14 @@ export default function AboutPage() {
                 <Reveal index={i} className="h-full rounded-card border border-border bg-surface p-6 md:p-8">
                   <h3 className="text-h3">{item.title}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted">{item.text}</p>
-                  {item.link && (
-                    <ExternalTextLink href={item.link.href} className="mt-3">
-                      {item.link.label}
-                    </ExternalTextLink>
+                  {item.links && item.links.length > 0 && (
+                    <ul className="mt-3">
+                      {item.links.map((link) => (
+                        <li key={link.href}>
+                          <ExternalTextLink href={link.href}>{link.label}</ExternalTextLink>
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </Reveal>
               </li>
