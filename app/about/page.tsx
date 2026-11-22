@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
+import { ExternalTextLink } from "@/components/ExternalTextLink";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -63,6 +64,27 @@ export default function AboutPage() {
         <SectionHeader id="experience-title" eyebrow="Experience" title="The story so far" />
         <ExperienceTimeline />
       </Section>
+
+      {site.beyondCode.length > 0 && (
+        <Section labelledBy="beyond-title" className="border-t border-border">
+          <SectionHeader id="beyond-title" eyebrow="Beyond code" title="Off the clock" />
+          <ul className="grid gap-6 md:grid-cols-2">
+            {site.beyondCode.map((item, i) => (
+              <li key={item.title}>
+                <Reveal index={i} className="h-full rounded-card border border-border bg-surface p-6 md:p-8">
+                  <h3 className="text-h3">{item.title}</h3>
+                  <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted">{item.text}</p>
+                  {item.link && (
+                    <ExternalTextLink href={item.link.href} className="mt-3">
+                      {item.link.label}
+                    </ExternalTextLink>
+                  )}
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
     </>
   );
 }

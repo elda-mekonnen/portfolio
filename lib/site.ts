@@ -28,4 +28,12 @@ export const site = {
   passions: ["Teaching & mentoring", "Community tech", "Photography", "Guitar", "Amharic & English"],
   // TODO: drop your resume at public/resume.pdf, then set this to "/resume.pdf".
   resume: "",
+  // "Beyond code" on the About page. Add more entries (with or without a link) as you like.
+  beyondCode: [
+    {
+      title: "Photography",
+      text: "At Penn I was a photographer for The Daily Pennsylvanian, shooting campus at night, student performances, and news around the university.",
+      link: { label: "See my published photos", href: "https://www.thedp.com/staff/elda-alemu-mekonnen" },
+    },
+  ] as { title: string; text: string; link?: { label: string; href: string } }[],
 };
