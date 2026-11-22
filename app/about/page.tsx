@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { ExternalTextLink } from "@/components/ExternalTextLink";
+import { PhotoStrip } from "@/components/PhotoStrip";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -87,6 +88,13 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
+
+          {site.photos.length > 0 && (
+            <Reveal className="mt-14">
+              <h3 className="eyebrow mb-4">Through my lens</h3>
+              <PhotoStrip photos={site.photos} label="Photos I've taken" />
+            </Reveal>
+          )}
         </Section>
       )}
     </>
